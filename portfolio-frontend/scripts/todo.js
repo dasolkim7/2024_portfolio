@@ -1,4 +1,4 @@
-const host = "http://127.0.0.1:8000";
+const host = "http://18.214.188.138:8080";
 //const host = "";
 const todosContainer = document.querySelector(".todos-container");
 
