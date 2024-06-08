@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>김다솔 프로필</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="scripts/canvas.js"></script>
+</head>
+
+<body>
+    <div id="screen-block"></div>
+
+    <div class="flex wrap">
+        <!-- Home -->
+        <section class="flex" id="home">
+            <div class="flex greeting">
+                <h1>안녕하세요<br>김다솔 프로필 사이트를 방문해주셔서 감사합니다!</h1>
+                <div class="button page-link" dest="about">VIEW MY WORK <i class="mdi mdi-arrow-right"></i></div>
+            </div>
+            <canvas class="background"></canvas>
+            <nav class="flex">
+                <div class="flex row menu wrapper">
+                    <div class="menu-item page-link active" dest="home">HOME</div>
+                    <div class="menu-item page-link" dest="about">김다솔</div>
+                    <div class="menu-item page-link" dest="strength">스펙</div>
+                    <div class="menu-item page-link" dest="projects">프로젝트</div>
+                    <div class="menu-item page-link" dest="contact">방명록</div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- About -->
+        <section class="flex" id="about">
+            <h2 class="header">김다솔</h2>
+            <div class="flex row container wrapper">
+                <div class="flex introduce">
+                    <img src="images/me.jpg" alt="얼굴 사진" class="backup-image">
+                    <div class="text">
+                        <a class="highlight" href="https://ic.kw.ac.kr/main/main.php" target="_blank"><b>광운대학교
+                                정보융합학부</b></a>에<br> 재학 중인
+                        <span class="highlight">김다솔</span>입니다.<br>
+                        인공지능에 관심을 갖고 있으며,<br>현재 <span class="highlight">데이터 사이언스</span> 전공입니다.
+                    </div>
+                </div>
+                <div class="flex skills">
+                    <div class="skills-item">
+                        <div class="flex skills-text">C</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="flex skills-text">Java Script</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="flex skills-text">Python</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="flex skills-text">HTML</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="flex skills-text">CSS</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills-item">
+                        <div class="flex skills-text">Git</div>
+                        <div class="bar-wrap">
+                            <div class="bar" style="max-width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strength -->
+        <section class="flex" id="strength">
+            <h2 class="header">스펙</h2>
+            <div class="flex row container wrapper">
+                <div class="flex row strength-wrap">
+                    <div class="flex strength-item">
+                        <i class="mdi mdi-hexagon hexagon" style="font-size: 200px;">
+                            <i class="mdi mdi-lightbulb-on icon" style="font-size: 100px;"></i>
+                        </i>
+                        <div class="title">학점</div>
+                        <div class="text">4.04 <br>(전공학점: 4)</div>
+                    </div>
+                    <div class="flex strength-item">
+                        <i class="mdi mdi-hexagon hexagon" style="font-size: 200px;">
+                            <i class="mdi mdi-equalizer icon" style="font-size: 100px;"></i>
+                        </i>
+                        <div class="title">어학 성적</div>
+                        <div class="text">토익 650 <br> OPIC 추후 응시 예정</div>
+                    </div>
+                </div>
+                <div class="flex row strength-wrap">
+                    <div class="flex strength-item">
+                        <i class="mdi mdi-hexagon hexagon" style="font-size: 200px;">
+                            <i class="mdi mdi-book-open-variant icon" style="font-size: 100px;"></i>
+                        </i>
+                        <div class="title">자격증</div>
+                        <div class="text">ADsP<br>컴퓨터 활용능력 1급</div>
+                    </div>
+                    <div class="flex strength-item">
+                        <i class="mdi mdi-hexagon hexagon" style="font-size: 200px;">
+                            <i class="mdi mdi-head-snowflake-outline icon" style="font-size: 100px;"></i>
+                        </i>
+                        <div class="title">동아리</div>
+                        <div class="text">밴드부 14fret<br>네비게이토</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex" id="projects">
+            <h2 class="header">프로젝트</h2>
+            <div class="flex container">
+                <div class="flex row projects-type-wrap">
+                    <div class="flex projects-type all active">All</div>
+                    <div class="flex projects-type personal">Personal</div>
+                    <div class="flex projects-type business">Team</div>
+                </div>
+                <div class="flex row projects-list wrapper">
+                    <div class="projects-item all personal">
+                        <img src="images/cos2.png" alt="MaskDetection" class="backup-image">
+                        <div class="flex projects-info">
+                            <h3>생기부 도서 추천 알고리즘<br>(고 2~3)</h3>
+                            <p class="summary">PYTHON / HTML / CSS / JS</p>
+                            <p class="details">
+                                고등학생 때 친구들과 함께 당시 유행하던 유튜브 추천 알고리즘을 통해 생기부 도서 추천 알고리즘을 구축해서 배포했습니다. 확률과 통계 시간에 배운 베이지안
+                                정리를 활용해 더욱 정확도를 높였으며 사용자에게 추천해준 책에 대한 만족도를 입력 받아 사용자 기반 추천과 책 자체의 평점을 통해 아이템 기반 추천을 함께
+                                사용했습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects-item all business">
+                        <img src="images/new eyes.png" alt="PMS" class="backup-image">
+                        <div class="flex projects-info">
+                            <h3>창설입 (1학년 1학기)</h3>
+                            <p class="summary">단순 스케치</p>
+                            <p class="details">
+                                시각장애인 유튜버를 보고 고안하게 된 스마트 지팡이 new eyes입니다.<br><br>
+                                앱과 지팡이와 안경 총 3가지로 구성되어있습니다.<br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects-item all business">
+                        <img src="images/machine learning.PNG" alt="WhiteBalance" class="backup-image">
+                        <div class="flex projects-info">
+                            <h3>기계학습 (2학년 1학기)</h3>
+                            <p class="summary">PYTHON</p>
+                            <p class="details">
+                                환자 정보를 기반으로 심근경색 합병증의 예측 모델과 심근경색 예측 모델입니다.<br><br>
+                                X값은 111개, Y값은 12개, Column은 1700개인 데이터를 사용하였습니다.
+                                <br><br>
+                                stacking 방식과 feature set으로 y값을 도출하는 방식 두 가지를 실현해 성능을 비교했습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects-item all business">
+                        <img src="images/movie.png" alt="MonitoringBD" class="backup-image">
+                        <div class="flex projects-info">
+                            <h3>빅데이터 프로그래밍<br>(2학년 1학기)</h3>
+                            <p class="summary">PYTHON</p>
+                            <p class="details">
+                                영화 데이터를 바탕으로 영화 관객수 즉 흥행률을 예측하는 모델을 구축하였습니다. <br><br>
+                                영화진흥원에서 다운받은 데이터에 없는 값들은 크롤링과 공공 api를 통해 얻었습니다.
+                                <br><br>
+                                python pandas 라이브러리를 사용했습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="flex" id="contact">
+            <h2 class="header">방명록</h2>
+            <script defer src="scripts/todo.js"></script>
+
+            <div class="flex container">
+                <!-- <input type="text" class="todo-input" placeholder="Add new todo"> -->
+                <form id="form-send" class="flex" method="POST">
+                    <input class="form-item" type="text" placeholder="Name" name="name" id="name">
+                    <textarea class="form-item" placeholder="Message" name="message" id="message"></textarea>
+                    <button class="btn-submit" type="reset" form="form-send" onclick="addTodo();">저장</button>
+                </form>
+
+                <div class="todos-container">
+                    <div class="todo-item">
+                        할일1
+                        <button class="delete-btn">x</button>
+                    </div>
+                    <div class="todo-item">
+                        123
+                        <button class="delete-btn">x</button>
+                    </div>
+                    <div class="todo-item">
+                        123
+                        <button class="delete-btn">x</button>
+                    </div>
+                    <div class="todo-item">
+                        123
+                        <button class="delete-btn">x</button>
+                    </div>
+                </div>
+
+                <!--
+                <form id="form-send" class="flex" method="POST">
+                    <input class="form-item" type="text" placeholder="Name" name="name">
+                    <input class="form-item" type="email" placeholder="Email" name="email">
+                    <input class="form-item" type="text" placeholder="Title" name="title">
+                    <textarea class="form-item" placeholder="Message" name="message"></textarea>
+                    <button class="btn-submit" type="reset" form="form-send" onclick="sendMessage();">Send
+                        Message</button>
+                </form>
+               -->
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/index.js"></script>
+
+    <div id="preload">
+        <img src="images/background4.jpg" onload="disableScreenBlock();">
+    </div>
+</body>
+
+</html>
