@@ -28,7 +28,7 @@ function fillTodoDiv(todoDiv, todo) {
   todoDiv.appendChild(hr2);
 
   const contentP = document.createElement("p");
-  contentP.textContent = todo.item;
+  contentP.innerHTML = content.replace(/\n/g, "<br>"); // \n을 <br>로 치환하여 줄바꿈 처리
   todoDiv.appendChild(contentP);
 }
 

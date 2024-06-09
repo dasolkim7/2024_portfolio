@@ -503,7 +503,8 @@ textarea.form-item {
   margin-bottom: 10px;
   font-size: 15px;
   width: 200px; /*calc(100% - 7px); /* 없으면 text size만큼 width가 늘어남 */
-  height: 200px;
+  height: auto; /* 높이를 내용에 따라 자동으로 설정 */
+  min-height: 100px;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   word-wrap: break-word; /*긴 단어가 있을 때 줄바꿈 처리 */
