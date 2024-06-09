@@ -1,4 +1,4 @@
-const host = "http://18.214.188.138:8080";
+const host = "http://18.214.188.138:8082";
 //const host = "";
 const todosContainer = document.querySelector(".todos-container");
 
@@ -12,16 +12,24 @@ function getTodos() {
     .catch((error) => [console.error("Error fetching todos:", error)]);
 }
 
-function formatItem(todo) {
-  let s =
-    "작성일시:" +
-    todo.savetime +
-    "<br>" +
-    "작성자:" +
-    todo.name +
-    "<hr>" +
-    todo.item;
-  return s;
+function fillTodoDiv(todoDiv, todo) {
+  const dateP = document.createElement("p");
+  dateP.textContent = `작성일: ${todo.savetime}`;
+  todoDiv.appendChild(dateP);
+
+  const hr1 = document.createElement("hr");
+  todoDiv.appendChild(hr1);
+
+  const nameP = document.createElement("p");
+  nameP.textContent = `작성자: ${todo.name}`;
+  todoDiv.appendChild(nameP);
+
+  const hr2 = document.createElement("hr");
+  todoDiv.appendChild(hr2);
+
+  const contentP = document.createElement("p");
+  contentP.textContent = todo.item;
+  todoDiv.appendChild(contentP);
 }
 
 function renderTodos(todos) {
@@ -29,7 +37,7 @@ function renderTodos(todos) {
   todos.forEach((todo) => {
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-item");
-    todoDiv.textContent = formatItem(todo);
+    fillTodoDiv(todoDiv, todo);
     todosContainer.appendChild(todoDiv);
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
