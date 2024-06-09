@@ -13,9 +13,14 @@ function getTodos() {
 }
 
 function formatItem(todo) {
-  let s = todo.savetime + "\n";
-  todo.name + "\n";
-  todo.item;
+  let s =
+    "작성일시:" +
+    todo.savetime +
+    "<br>" +
+    "작성자:" +
+    todo.name +
+    "<hr>" +
+    todo.item;
   return s;
 }
 

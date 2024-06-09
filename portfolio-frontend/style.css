@@ -17,6 +17,13 @@
   transition-timing-function: ease-in-out;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid black; /* 검정색 실선 */
+  margin-top: 12px; /* 위쪽 여백 */
+  margin-bottom: 12px;
+}
+
 a {
   text-decoration: none;
 }
@@ -106,9 +113,6 @@ body {
 .greeting .button:hover {
   background-color: rgb(129, 0, 255);
   border-color: rgb(129, 0, 255);
-}
-
-.greeting .button i {
 }
 
 .greeting .button i::before {
@@ -490,15 +494,16 @@ textarea.form-item {
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /*요소 사이의 간격*/
+  justify-content: center; /* 가로 방향 가운데 정렬 */
 }
 
 .todo-item {
-  background-color: #f5f23c;
+  background-color: #ffc0cb;
   padding: 5px;
   margin-bottom: 10px;
   font-size: 15px;
-  width: calc(100% - 7px); /* 없으면 text size만큼 width가 늘어남 */
-  height: 80px;
+  width: 200px; /*calc(100% - 7px); /* 없으면 text size만큼 width가 늘어남 */
+  height: 200px;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   word-wrap: break-word; /*긴 단어가 있을 때 줄바꿈 처리 */
